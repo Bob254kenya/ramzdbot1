@@ -1,18 +1,10 @@
 {
     "buildCommand": "npm run build",
     "outputDirectory": "dist",
-    "devCommand": "npm run start",
-    "installCommand": "npm install",
     "rewrites": [
         {
             "source": "/(.*)",
             "destination": "/index.html"
         }
-    ],
-    "framework": "react",
-    "functions": {
-        "api/*.js": {
-            "maxDuration": 10
-        }
-    }
+    ]
 }
