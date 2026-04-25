@@ -1,10 +1,18 @@
 {
+    "buildCommand": "npm run build",
     "outputDirectory": "dist",
-    "buildCommand": "echo ✅  Skipping build to use existing built files",
+    "devCommand": "npm run start",
+    "installCommand": "npm install",
     "rewrites": [
         {
             "source": "/(.*)",
             "destination": "/index.html"
         }
-    ]
+    ],
+    "framework": "react",
+    "functions": {
+        "api/*.js": {
+            "maxDuration": 10
+        }
+    }
 }
