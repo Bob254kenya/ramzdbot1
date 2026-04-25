@@ -14,10 +14,7 @@ export default defineConfig({
         pluginSass({
             sassLoaderOptions: {
                 sourceMap: !isProduction,
-                sassOptions: {
-                    // includePaths: [path.resolve(__dirname, 'src')],
-                },
-                // additionalData: `@use "${path.resolve(__dirname, 'src/components/shared/styles')}" as *;`,
+                sassOptions: {},
             },
             exclude: /node_modules/,
         }),
@@ -48,7 +45,6 @@ export default defineConfig({
                 RUDDERSTACK_KEY: JSON.stringify(process.env.RUDDERSTACK_KEY || ''),
                 GROWTHBOOK_CLIENT_KEY: JSON.stringify(process.env.GROWTHBOOK_CLIENT_KEY || ''),
                 GROWTHBOOK_DECRYPTION_KEY: JSON.stringify(process.env.GROWTHBOOK_DECRYPTION_KEY || ''),
-                // Add Vercel-specific environment variables
                 VERCEL: JSON.stringify(process.env.VERCEL || false),
                 VERCEL_ENV: JSON.stringify(process.env.VERCEL_ENV || ''),
                 VERCEL_URL: JSON.stringify(process.env.VERCEL_URL || ''),
